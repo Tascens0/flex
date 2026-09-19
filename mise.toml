@@ -1,0 +1,5 @@
+[tools]
+"github:JohnnyMorganz/StyLua" = "latest"
+"github:JohnnyMorganz/luau-lsp" = "latest"
+"github:Kampfkarren/selene" = { version = "latest", bin = "selene" }
+"github:lune-org/lune" = "latest"
