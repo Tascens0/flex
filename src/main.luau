@@ -5,7 +5,7 @@
 local process = require("@lune/process")
 local stdio = require("@lune/stdio")
 local fs = require("@lune/fs")
-local countRecursive = require("@self/countRecursive")
+local countRecursive = require("./countRecursive")
 
 --------------------------------------------
 --VARIABLES--
@@ -32,7 +32,7 @@ end
 --INITIALIZATION--
 --------------------------------------------
 
-local function main(): never
+return function(): never
 	local root = args[1]
 	local pattern = args[2]
 	if not (root and type(root) == "string" and isFileOrDir(root)) then
@@ -48,5 +48,3 @@ local function main(): never
 	end
 	return process.exit(0)
 end
-
-main()
